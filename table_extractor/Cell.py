@@ -9,7 +9,7 @@ class Cell:
     def set_intersects(self, intersects):
         row_y = intersects[0][1]
         row = []
-        for i in range(len''ntersects)):
+        for i in range(len(intersects)):
             if i == len(intersects) - 1:
                 row.append(intersects[i])
                 self.intersects.append(row)

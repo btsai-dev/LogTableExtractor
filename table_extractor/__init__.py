@@ -168,12 +168,12 @@ def extract_data(img):
 
         table_mask = cv2.addWeighted(table_vert, 0.5, table_hori, 0.5, 0.0)
 
-        #cv2.imshow("img_cropped", img_cropped)
-        #cv2.imshow("table_vert", table_vert)
-        #cv2.imshow("table_hori", table_hori)
-        #cv2.imshow("table_mask", table_mask)
-        cv2.waitKey(0)
-        cv2.destroyAllWindows()
+        # cv2.imshow("img_cropped", img_cropped)
+        # cv2.imshow("table_vert", table_vert)
+        # cv2.imshow("table_hori", table_hori)
+        # cv2.imshow("table_mask", table_mask)
+        # cv2.waitKey(0)
+        # cv2.destroyAllWindows()
         kernel = cv2.getStructuringElement(cv2.MORPH_RECT, (2, 2))
         table_mask = cv2.erode(~table_mask, kernel, iterations=2)
         thresh, img_vh = cv2.threshold(table_mask, 128, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
